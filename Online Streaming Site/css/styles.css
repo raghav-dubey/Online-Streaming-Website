@@ -1,0 +1,636 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    height: 3.125em;
+    background-color: black;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 3.125em;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    font-size: 1.875em;
+    color: #4dbf00;
+    background-image: linear-gradient(
+      -75deg,
+      transparent 0,
+      transparent 5%,
+      rgba(255,255,255,0.5) 5%,
+      rgba(255,255,255,0.5) 10%,
+      transparent 10%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    transition: 1.2s;
+}
+
+.logo:hover {
+  background-position: -90% 0;
+}
+
+.menu-container {
+    flex: 6;
+}
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+}
+
+.menu-list li:hover {
+  text-decoration: underline;
+  color: rgb(236, 214, 12);
+  cursor: pointer;
+}
+
+.menu-list-item {
+    margin-right: 1.875em;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.profile-text-container {
+    margin: 0 1.25em;
+}
+
+.profile-picture {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 1s ease-in-out;
+}
+
+.profile-picture:hover {
+  width: 4em;
+  height: 4em;
+  
+}
+
+.toggle {
+    width: 2.5em;
+    height: 1.25em;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-scroll {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.left-menu-icon {
+    color: white;
+    font-size: 1.25em;
+    margin-bottom: 3.125em;
+}
+
+.container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+  }
+  
+.content-container {
+  margin-left: 3.125em;
+}
+
+.content-container-1 {
+  margin-left: 3.125em;
+}
+  
+  .featured-content {
+    height: 50vh;
+    padding: 3.125em;
+  }
+  
+  .featured-title {
+    width: 200px;
+  }
+  
+  .featured-desc {
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+  }
+  
+.featured-button {
+    background-color: #4dbf00;
+    color: black;
+    padding: 0.625em 1.25em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+}
+
+.featured-button:hover {
+  background-color: darkblue;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 4.625em;
+  }
+
+.dot-container {
+    text-align: center;
+    position: relative;
+    top: 1.125em;
+}
+
+.dot {
+    height: 1em;
+    width: 1em;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+.active {
+    background-color: #717171;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  margin-left: 43px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.125em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.movie-list-container {
+  position: relative;
+  left: 61px;
+  bottom: -30px;
+  padding: 0 20px;
+}
+
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.movie-list-1 {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+
+.movie-list-item-img {
+  transition: all 1s ease-in-out;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.movie-list-item-title {
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc {
+  background-color: #333;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  width: 230px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  text-decoration: none;
+}
+
+.movie-list-item-button:hover {
+  background-color: pink;
+}
+
+.arrow {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 44px;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.arrow-1 {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 44px;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+
+.container.active {
+  background-color: white;
+}
+
+.pulsate {
+  animation: pulsate 1.5s infinite alternate;     
+}
+
+@keyframes pulsate {
+    
+  100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  0% {
+
+    text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #0fa,
+    0 0 45px #0fa,
+    0 0 55px #0fa,
+    0 0 70px #0fa,
+    0 0 80px #0fa;
+
+  }
+}
+
+
+.movie-list-title.active {
+  color: black;
+}
+
+.navbar-container.active {
+  background-color: white;
+  color: black;
+}
+
+.sidebar.active {
+  background-color: white;
+}
+
+.left-menu-icon.active {
+  color: black;
+}
+
+.toggle.active {
+  background-color: black;
+}
+
+.toggle-scroll.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+.iq-bg-dark {
+  margin-left: 50px;
+  background-color: lightseagreen;
+}
+
+.container-fluid {
+  position: relative;
+  left: 10px;
+}
+
+.footer-top {
+  padding: 60px 0;
+}
+
+footer .footer-standard .widget ul li {
+  display: inline-block;
+  padding-right: 30px;
+}
+
+footer .footer-standard .widget ul>li>a {
+  padding: 0;
+  font-weight: 400;
+}
+
+footer .footer-standard .widget ul>li>a::before {
+  display: none;
+}
+
+.footer-link-title {
+  margin-bottom: 20px;
+  margin-top: 28px;
+}
+
+.widget {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.footer-text {
+  top: 8px;
+  position: relative;
+}
+
+footer .info-share li a {
+  color: #6c757d;
+}
+
+.terms, .privacy, .FAQ, .watch-list {
+  color: currentColor;
+}
+
+.info-share li {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.info-share li:last-child {
+  margin-right: 0;
+}
+
+
+
+.iq-bg-dark {
+  position: relative;
+}
+
+.info-share {
+  padding-left: 0;
+}
+
+.info-share li {
+  margin-right: 12px;
+  display: inline-block;
+}
+
+footer .footer-top .info-share li a {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 0;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 50%;
+  background: rgba(41, 41, 41, 0.76);
+  transition: all 0.4s ease 0s;
+}
+
+footer .footer-top .info-share li a:hover{
+  box-shadow: 0 0 10px #bf000a;
+  text-shadow: 0 0 2px #bf000a;
+  color: #e50914;
+  transition: all 0.4s ease 0s;
+}
+
+.info-share li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.9);
+  z-index: -1;
+  border-radius: 50%;
+  transition: all 0.4s ease 0s;
+}
+
+.footer-link-title {
+  width: 100px;
+}
+
+
+@media only screen and (max-width: 360px){
+  .menu-container{
+      display: none;
+  }
+  body {
+    width: 174%;
+  }
+  .movie-list-title.active {
+    position: relative;
+    top: 20px;
+  }
+  .featured-desc {
+    width: 400px;
+  }
+  .movie-list-wrapper {
+    right: 30px;
+  }
+  .movie-list-title {
+    right: 30px;
+  }
+  .next {
+    right: -6px;
+  }
+  .movie-list-item {
+    margin-right: 49px;
+  }
+  .arrow {
+    right: 1em;
+  }
+  .arrow-1 {
+    right: 1em;
+  }
+  .logo {
+    font-size: 1.25em;
+  }
+  .profile-picture {
+    width: 25px;
+    height: 25px;
+  }
+  .featured-desc {
+    width: 79%;
+  }
+  .footer-text {
+    width: 90%;
+  }
+  .iq-bg-dark {
+    width: 70%;
+  }
+  ul.menu.p-0 {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .menu-container{
+      display: none;
+  }
+  body {
+    width: 123%;
+  }
+  .profile-container {
+    justify-content: center;
+    position: relative;
+    left: 0px;
+  }
+  .next {
+    right: 0px;
+  }
+  .dot-container {
+    top: -24px;
+    right: 31px;
+  }
+  .arrow {
+    right: 228px;
+  }
+  .arrow-1 {
+    right: 228px;
+  }
+}
+

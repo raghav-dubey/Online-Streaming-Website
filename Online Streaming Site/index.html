@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Streaming Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Starts Here -->
+    <header>
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="logo-container">
+                    <h1 class="logo">BingoTV</h1>
+                </div>
+                <div class="menu-container">
+                    <ul class="menu-list">
+                        <li class="menu-list-item active">Home</li>
+                        <li class="menu-list-item movies">Movies</li>
+                        <li class="menu-list-item">Series</li>
+                        <li class="menu-list-item">Popular</li>
+                        <li class="menu-list-item">Trending</li>
+                    </ul>
+                </div>
+                <div class="profile-container">
+                    <img src="images/profile.jpg" alt="Profile Image" class="profile-picture">
+                    <div class="profile-text-container">
+                        <span class="profile-text">Profile</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="toggle">
+                        <i class="fas fa-moon toggle-icon"></i>
+                        <i class="fas fa-sun toggle-icon"></i>
+                        <div class="toggle-scroll"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Ends Here -->
+
+    <!-- Main Started -->
+    <main>
+        <div class="sidebar">
+            <i class="left-menu-icon fas fa-search"></i>
+            <i class="left-menu-icon fas fa-home"></i>
+            <i class="left-menu-icon fas fa-users"></i>
+            <i class="left-menu-icon fas fa-bookmark"></i>
+            <i class="left-menu-icon fas fa-tv"></i>
+            <i class="left-menu-icon fas fa-hourglass-start"></i>
+        </div>
+        <div class="container">
+            <div class="content-container fade"></div>
+            <div class="dot-container">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+            <div class="movie-list-container">
+                <h1 class="movie-list-title pulsate">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list"></div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title pulsate">TRENDING NOW</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list-1"></div>
+                    <i class="fas fa-chevron-right arrow-1"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Ended -->
+
+    <footer class="iq-bg-dark">
+        <div class="footer-top">
+          <div class="container-fluid">
+            <div class="row footer-standard">
+              <div class="col-lg-5">
+                <div class="widget text-left">
+                  <div>
+                    <ul class="menu p-0">
+                      <li><a href="#" class="terms">Terms of Use</a></li>
+                      <li><a href="#" class="privacy">Privacy-Policy</a></li>
+                      <li><a href="#" class="FAQ">FAQ</a></li>
+                      <li><a href="#" class="watch-list">Watch List</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="widget text-left">
+                  <div class="textwidget">
+                    <p class="footer-text"><small>This is Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quo tempore. Quasi rem rerum est in nulla atque quibusdam illo. this is footer and simple tsesxij is writen jkd. fsek hello how are you. please like and subscribe. footer ends .</small></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                <h2 class="footer-link-title">
+                  Follow Us:
+                </h2>
+                <ul class="info-share">
+                  <li>
+                    <a href="#">
+                      <i>
+                      <fa class="fab fa-facebook"></fa>
+                      </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i>
+                      <fa class="fab fa-youtube"></fa>
+                      </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i>
+                      <fa class="fab fa-instagram"></fa>
+                    </i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                <div class="widget text-left">
+                  <div class="textwidget">
+                    <h3 class="footer-link-title pulsate">
+                      BingoTV App 
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <a href="#"><img src="images/footer-image1.jpg" alt=""></a>
+                      <br>
+                      <a href="#"><img src="images/footer-image2.jpg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+        
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/carousel-image-data.js"></script>
+    <script src="js/movie-list-images.js"></script>
+    <script src="js/trending-movie-info.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
